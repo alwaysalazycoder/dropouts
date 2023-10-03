@@ -1,0 +1,1 @@
+export const welcome = ["Welcome to the site" , "साइट पर आपका स्वागत है" , "સાઇટ પર આપનું સ્વાગત છે"];

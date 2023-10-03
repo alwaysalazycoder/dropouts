@@ -1,9 +1,20 @@
-import React from 'react'
+import React from "react";
+import { Navigate, Route, Routes } from "react-router-dom";
+
+import HomeLayout from "./layouts/home";
+import AuthLayout from "./layouts/auth";
+import DashboardLayout from "./layouts/dashboard";
 
 const App = () => {
   return (
-    <div>App</div>
-  )
-}
+    <Routes>
+      <Route path="home/*" element={<HomeLayout />} />
+      <Route path="auth/*" element={<AuthLayout />} />
+      <Route path="dashboard/*" element={<DashboardLayout />} />
 
-export default App
+      <Route path="/" element={<Navigate to={"/home"} />} />
+    </Routes>
+  );
+};
+
+export default App;
